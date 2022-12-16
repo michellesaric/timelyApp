@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimelyApp", "TimelyApp\TimelyApp.csproj", "{3229995A-FAB4-4536-AAE1-522D21F107AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimelyApp.Web", "TimelyApp\TimelyApp.Web.csproj", "{3229995A-FAB4-4536-AAE1-522D21F107AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimelyApp.Data", "TimelyApp.Data\TimelyApp.Data.csproj", "{F7CBC164-1C51-4128-9D31-FADF71CFEE74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimelyApp.Domain", "TimelyApp.Domain\TimelyApp.Domain.csproj", "{4DD4C482-D8A7-407D-9D80-A50100CD3723}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{3229995A-FAB4-4536-AAE1-522D21F107AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3229995A-FAB4-4536-AAE1-522D21F107AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3229995A-FAB4-4536-AAE1-522D21F107AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7CBC164-1C51-4128-9D31-FADF71CFEE74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7CBC164-1C51-4128-9D31-FADF71CFEE74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7CBC164-1C51-4128-9D31-FADF71CFEE74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7CBC164-1C51-4128-9D31-FADF71CFEE74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD4C482-D8A7-407D-9D80-A50100CD3723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD4C482-D8A7-407D-9D80-A50100CD3723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD4C482-D8A7-407D-9D80-A50100CD3723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD4C482-D8A7-407D-9D80-A50100CD3723}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

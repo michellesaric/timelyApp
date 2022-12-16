@@ -1,0 +1,90 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "TimelyApp.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/TimelyApp.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TimelyApp.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TimelyApp.Data/1.0.0": {
+      "type": "project",
+      "path": "../TimelyApp.Data/TimelyApp.Data.csproj",
+      "msbuildProject": "../TimelyApp.Data/TimelyApp.Data.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "TimelyApp.Data >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\38595\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\38595\\Desktop\\timelyApp\\TimelyApp\\TimelyApp.Domain\\TimelyApp.Domain.csproj",
+      "projectName": "TimelyApp.Domain",
+      "projectPath": "C:\\Users\\38595\\Desktop\\timelyApp\\TimelyApp\\TimelyApp.Domain\\TimelyApp.Domain.csproj",
+      "packagesPath": "C:\\Users\\38595\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\38595\\Desktop\\timelyApp\\TimelyApp\\TimelyApp.Domain\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\38595\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\38595\\Desktop\\timelyApp\\TimelyApp\\TimelyApp.Data\\TimelyApp.Data.csproj": {
+              "projectPath": "C:\\Users\\38595\\Desktop\\timelyApp\\TimelyApp\\TimelyApp.Data\\TimelyApp.Data.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
