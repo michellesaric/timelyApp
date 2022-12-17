@@ -57,7 +57,18 @@ namespace TimelyApp.Web.Controllers
             return Ok(projectTime);
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult RemoveProjectTime(int id)
+        {
+            var isSuccessful = _projectTimeRepository.DeleteProjectTime(id);
 
+            if (!isSuccessful)
+            {
+                return NotFound(id);
+            }
+
+            return Ok();
+        }
 
     }
 }
