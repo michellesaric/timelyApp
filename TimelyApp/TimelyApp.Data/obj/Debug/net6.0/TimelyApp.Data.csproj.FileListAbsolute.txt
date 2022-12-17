@@ -1,0 +1,14 @@
+C:\Users\38595\Desktop\timelyApp\TimelyApp\TimelyApp.Data\bin\Debug\net6.0\TimelyApp.Data.deps.json
+C:\Users\38595\Desktop\timelyApp\TimelyApp\TimelyApp.Data\bin\Debug\net6.0\TimelyApp.Data.runtimeconfig.json
+C:\Users\38595\Desktop\timelyApp\TimelyApp\TimelyApp.Data\bin\Debug\net6.0\TimelyApp.Data.dll
+C:\Users\38595\Desktop\timelyApp\TimelyApp\TimelyApp.Data\bin\Debug\net6.0\TimelyApp.Data.pdb
+C:\Users\38595\Desktop\timelyApp\TimelyApp\TimelyApp.Data\obj\Debug\net6.0\TimelyApp.Data.csproj.AssemblyReference.cache
+C:\Users\38595\Desktop\timelyApp\TimelyApp\TimelyApp.Data\obj\Debug\net6.0\TimelyApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\38595\Desktop\timelyApp\TimelyApp\TimelyApp.Data\obj\Debug\net6.0\TimelyApp.Data.AssemblyInfoInputs.cache
+C:\Users\38595\Desktop\timelyApp\TimelyApp\TimelyApp.Data\obj\Debug\net6.0\TimelyApp.Data.AssemblyInfo.cs
+C:\Users\38595\Desktop\timelyApp\TimelyApp\TimelyApp.Data\obj\Debug\net6.0\TimelyApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\38595\Desktop\timelyApp\TimelyApp\TimelyApp.Data\obj\Debug\net6.0\TimelyApp.Data.dll
+C:\Users\38595\Desktop\timelyApp\TimelyApp\TimelyApp.Data\obj\Debug\net6.0\refint\TimelyApp.Data.dll
+C:\Users\38595\Desktop\timelyApp\TimelyApp\TimelyApp.Data\obj\Debug\net6.0\TimelyApp.Data.pdb
+C:\Users\38595\Desktop\timelyApp\TimelyApp\TimelyApp.Data\obj\Debug\net6.0\TimelyApp.Data.genruntimeconfig.cache
+C:\Users\38595\Desktop\timelyApp\TimelyApp\TimelyApp.Data\obj\Debug\net6.0\ref\TimelyApp.Data.dll
