@@ -1,6 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using TimelyApp.Data.Entities;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var timelyContext = builder.Configuration.GetConnectionString(nameof(TimelyAppContext));
+
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<TimelyAppContext>(options => options.UseSqlServer(timelyContext));
 
 builder.Services.AddControllersWithViews();
 
