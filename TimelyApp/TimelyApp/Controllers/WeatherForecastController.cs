@@ -1,33 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TimelyApp.Domain.Repositories.Interfaces;
 
-namespace TimelyApp.Controllers
+namespace TimelyApp.Web.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class ProjectTimeController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+        private readonly IProjectTimeRepository _projectTimeRepository;
 
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public ProjectTimeController(IProjectTimeRepository projectTimeRepository)
         {
-            _logger = logger;
+            _projectTimeRepository = projectTimeRepository;
         }
 
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+
+        [HttpGet("{pageNumber}")]
+        public IActionResult Pagination(int pageNumber)
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            var projectTimes = _projectTimeRepository.Pagination(pageNumber);
+
+            return Ok(projectTimes);
         }
     }
 }
