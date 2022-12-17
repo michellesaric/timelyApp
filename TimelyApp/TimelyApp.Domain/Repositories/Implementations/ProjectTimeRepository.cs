@@ -73,6 +73,19 @@ namespace TimelyApp.Domain.Repositories.Implementations
             return true;
         }
 
+        public ProjectTime EditProjectName(int id, string projectName)
+        {
+            var projectTime = _timelyAppContext.ProjectTimes.Find(id);
+
+            if (projectTime == null)
+            {
+                return null;
+            }
+
+            projectTime.ProjectName = projectName;
+            _timelyAppContext.SaveChanges();
+            return projectTime;
+        }
 
     }
 }
