@@ -30,5 +30,20 @@ namespace TimelyApp.Web.Controllers
             return Ok();
         }
 
+
+        [HttpPut("{projectName}")]
+        public IActionResult AddNewProject(string projectName)
+        {
+            var isSuccessful = _projectTimeRepository.AddNewProject(projectName);
+
+            if (!isSuccessful)
+            {
+                return BadRequest();
+            }
+
+            return Ok();
+        }
+
+
     }
 }
