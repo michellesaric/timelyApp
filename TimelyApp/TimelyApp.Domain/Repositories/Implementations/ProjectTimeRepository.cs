@@ -34,14 +34,24 @@ namespace TimelyApp.Domain.Repositories.Implementations
 
         public void AddNewStartingTime()
         {
-            _timelyAppContext.ProjectTimes.Add(new ProjectTime
+            var projectTime = _timelyAppContext.ProjectTimes
+                           .OrderByDescending(pT => pT.Id)
+                           .FirstOrDefault();
+            if (projectTime == null || (projectTime.ProjectName != null && projectTime.EndingTime != null && projectTime.Duration != null))
             {
-                ProjectName = null,
-                StartingTime = DateTime.Now,
-                EndingTime = null,
-                Duration = null
-            });
-            _timelyAppContext.SaveChanges();
+                _timelyAppContext.ProjectTimes.Add(new ProjectTime
+                {
+                    ProjectName = null,
+                    StartingTime = DateTime.Now,
+                    EndingTime = null,
+                    Duration = null
+                });
+                _timelyAppContext.SaveChanges();
+            }
+            else
+            {
+                return;
+            };
         }
 
         public bool AddNewProject(string projectName)
@@ -49,7 +59,7 @@ namespace TimelyApp.Domain.Repositories.Implementations
             var projectTime = _timelyAppContext.ProjectTimes
                             .OrderByDescending(pT => pT.Id)
                             .FirstOrDefault();
-            if (projectTime == null || projectTime.ProjectName == null || projectTime.EndingTime == null || projectTime.Duration == null)
+            if (projectTime == null || (projectTime.ProjectName == null && projectTime.EndingTime == null && projectTime.Duration == null))
             {
                 projectTime.ProjectName = projectName;
                 projectTime.EndingTime = DateTime.Now;
