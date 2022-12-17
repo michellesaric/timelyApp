@@ -32,5 +32,19 @@ namespace TimelyApp.Domain.Repositories.Implementations
             return projectTimes;
         }
 
+        public void AddNewStartingTime()
+        {
+            _timelyAppContext.ProjectTimes.Add(new ProjectTime
+            {
+                ProjectName = null,
+                StartingTime = DateTime.Now,
+                EndingTime = null,
+                Duration = null
+            });
+            _timelyAppContext.SaveChanges();
+        }
+
+
+
     }
 }
