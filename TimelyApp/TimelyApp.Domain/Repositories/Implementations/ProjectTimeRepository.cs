@@ -87,5 +87,19 @@ namespace TimelyApp.Domain.Repositories.Implementations
             return projectTime;
         }
 
+        public bool DeleteProjectTime(int id)
+        {
+            var projectTime = _timelyAppContext.ProjectTimes.Find(id);
+
+            if (projectTime == null)
+            {
+                return false;
+            }
+
+            _timelyAppContext.ProjectTimes.Remove(projectTime);
+            _timelyAppContext.SaveChanges();
+
+            return true;
+        }
     }
 }
