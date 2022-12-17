@@ -44,6 +44,20 @@ namespace TimelyApp.Web.Controllers
             return Ok();
         }
 
+        [HttpPatch("{id}/projectName/{projectName}")]
+        public IActionResult EditProjectName(int id, string projectName)
+        {
+            var projectTime = _projectTimeRepository.EditProjectName(id, projectName);
+
+            if (projectTime == null)
+            {
+                return NotFound(id);
+            }
+
+            return Ok(projectTime);
+        }
+
+
 
     }
 }
