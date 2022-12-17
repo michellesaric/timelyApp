@@ -22,5 +22,13 @@ namespace TimelyApp.Web.Controllers
 
             return Ok(projectTimes);
         }
+
+        [HttpPost]
+        public IActionResult AddStartingTime()
+        {
+            _projectTimeRepository.AddNewStartingTime();
+            return Ok();
+        }
+
     }
 }
