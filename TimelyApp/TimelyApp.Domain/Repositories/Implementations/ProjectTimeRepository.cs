@@ -44,6 +44,24 @@ namespace TimelyApp.Domain.Repositories.Implementations
             _timelyAppContext.SaveChanges();
         }
 
+        public bool AddNewProject(string projectName)
+        {
+            var projectTime = _timelyAppContext.ProjectTimes
+                            .OrderByDescending(pT => pT.Id)
+                            .FirstOrDefault();
+            if (projectTime == null || projectTime.ProjectName == null || projectTime.EndingTime == null || projectTime.Duration == null)
+            {
+                projectTime.ProjectName = projectName;
+                projectTime.EndingTime = DateTime.Now;
+                projectTime.Duration = projectTime.EndingTime - projectTime.StartingTime;
+                _timelyAppContext.SaveChanges();
+            }
+            else
+            {
+                return false;
+            }
+            return true;
+        }
 
 
     }
