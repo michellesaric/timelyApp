@@ -17,8 +17,4 @@
     <ProjectReference Include="..\TimelyApp.Data\TimelyApp.Data.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\Implementations\" />
-  </ItemGroup>
-
 </Project>
