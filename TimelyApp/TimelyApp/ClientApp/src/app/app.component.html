@@ -1,1 +1,22 @@
-<app-edit-modal></app-edit-modal>
+<div>
+  <button (click)="postData($event.target)">{{ buttonText }}</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Project</th>
+        <th>Start</th>
+        <th>Stop</th>
+        <th>Duration</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let projectTime of projectTimes">
+        <td>{{ projectTime.projectName }}</td>
+        <td>{{ projectTime.startingTime }}</td>
+        <td>{{ projectTime.endingTime }}</td>
+        <td>{{ projectTime.duration }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

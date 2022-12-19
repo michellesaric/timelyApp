@@ -4,7 +4,7 @@ namespace TimelyApp.Domain.Repositories.Interfaces
 {
     public interface IProjectTimeRepository
     {
-        List<ProjectTime> Pagination(int pageNumber);
+        List<ProjectTime> GetProjectTimes();
 
         void AddNewStartingTime();
         bool AddNewProject(string projectName);

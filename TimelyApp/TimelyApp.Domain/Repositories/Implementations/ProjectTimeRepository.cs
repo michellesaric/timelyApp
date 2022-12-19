@@ -18,15 +18,10 @@ namespace TimelyApp.Domain.Repositories.Implementations
             _timelyAppContext = timelyContext;
         }
 
-        public List<ProjectTime> Pagination(int pageNumber)
+        public List<ProjectTime> GetProjectTimes()
         {
-            if (pageNumber < 1)
-            {
-                pageNumber = 1;
-            }
             var projectTimes = _timelyAppContext
-                .ProjectTimes.Skip((pageNumber - 1) * 10)
-                .Take(10)
+                .ProjectTimes
                 .ToList();
 
             return projectTimes;

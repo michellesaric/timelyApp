@@ -15,10 +15,10 @@ namespace TimelyApp.Web.Controllers
         }
 
 
-        [HttpGet("{pageNumber}")]
-        public IActionResult Pagination(int pageNumber)
+        [HttpGet]
+        public IActionResult GetAllProjectTimes()
         {
-            var projectTimes = _projectTimeRepository.Pagination(pageNumber);
+            var projectTimes = _projectTimeRepository.GetProjectTimes();
 
             return Ok(projectTimes);
         }
